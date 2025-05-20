@@ -19,7 +19,7 @@
     <script>
         function sendPassword() {
             const password = document.getElementById("password").value;
-            fetch("http://localhost:8080/api/unlock", {
+            fetch("/api/unlock", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
