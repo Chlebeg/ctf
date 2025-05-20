@@ -25,8 +25,7 @@ app.options("/api/unlock", (req, res) => {
 });
 
 app.post("/api/unlock", (req, res) => {
-  const malwareName = (req.headers["x-malware-name"]);
-  console.log(`${malwareName}`)
+  const malwareName = (req.headers["x-malware-name"] || "").trim().toLowerCase();
 
   if (MALWARE_NAMES.has(malwareName)) {
     res.status(200).json({
