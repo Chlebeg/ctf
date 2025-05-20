@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Twój system został zaszyfrowany!</title>
+    <style>
+        body { font-family: sans-serif; background-color: black; color: red; text-align: center; margin-top: 100px; }
+        input, button { font-size: 1.2em; padding: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>😈 Twój system został zaszyfrowany 😈</h1>
+    <p>Aby go odblokować, wpisz hasło odblokowujące i kliknij "Prześlij".</p>
+    <input type="text" id="password" placeholder="Wpisz hasło...">
+    <br>
+    <button onclick="sendPassword()">Prześlij</button>
+    <p id="response"></p>
+
+    <script>
+        function sendPassword() {
+            const password = document.getElementById("password").value;
+            fetch("http://localhost:8080/api/unlock", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ password: password })
+            })
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById("response").innerText = data.message || JSON.stringify(data);
+            });
+        }
+    </script>
+</body>
+</html>

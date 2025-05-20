@@ -1,0 +1,13 @@
+Hej,
+
+Wiem, że jesteś teraz na urlopie, ale mamy tu niezły bajzel... 
+Ktoś odpalił jakiś plik, cały system poszedł — wszystko zaszyfrowane. Wygląda na ransomware.
+
+Udało mi się trochę pogrzebać i znalazłem coś w logach, może Ci się przyda. Ten hash wygląda podejrzanie:
+SHA256: 39cac97c53d4433263eb1050912eb242f9a5c7ab6915043c5cc299fe8d0caad4
+
+Zostawili link do strony z okupem: http://127.0.0.1:8080
+
+Na razie nie ruszaj niczego, może da się to jakoś obejść.
+
+— Chle
