@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 8080;
 
 const FLAG = "YELLOW{Czego_mi_ruszasz_header?}";
 const MALWARE_NAMES = new Set([
-  "filecrypt2",
+  "cryptfile2",
   "adobeflashplayer_dcf6d65e5dfcb0db.exe"
 ]);
 
